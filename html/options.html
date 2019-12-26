@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Target Tabs Options</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .field-outer {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+
+    .field-outer div {
+      width: 50%;
+      margin-top: 10px;
+    }
+
+    .field-outer h2 {
+      width: 49%;
+      display: inline-block;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .field-outer h2.xyoffsets {
+      width: unset;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup-header d-flex">
+    <div>
+      <h1 class="panel-title m-auto t-center">
+        <strong>TargetTabs</strong> <span>by Data|z</span>
+      </h1>
+    </div>
+    <div class="d-flex">
+      <label class="switch m-auto ml-30">
+        <input type="checkbox" id="targetTabsSwitch" checked />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <div class="d-flex">
+    <div class="m-auto mt-20 w-70">
+      <form class="form" name="optionsForm">
+        <div class="field-outer">
+          <h2 for="numTabs">Number of Target Tabs:</h2>
+          <div>
+            <span id="numTabsHolder"></span>
+            <input type="hidden" id="numTabs" value="3" min="1" max="10" class="field disabled-input" />
+          </div>
+        </div>
+        <div class="field-outer">
+          <h2>Interface Type:</h2>
+          <div class="switch-field-radio">
+            <input type="radio" id="hoveringDot" name="interfaceType" value="hoveringDot" checked />
+            <label for="hoveringDot">Hovering Dot</label>
+            <input type="radio" id="contextMenu" name="interfaceType" value="contextMenu" />
+            <label for="contextMenu">Context Menu</label>
+          </div>
+        </div>
+        <div id="hoveringDotBlock">
+          <div class="field-outer">
+            <h2>Show Gear after bubbles:</h2>
+            <div class="switch-field">
+              <label class="switch">
+                <input type="checkbox" id="showGear" checked />
+                <span class="slider round in-white"></span>
+              </label>
+            </div>
+          </div>
+          <div class="field-outer">
+            <h2>Position dot relative to?</h2>
+            <div class="switch-field-radio">
+              <input type="radio" id="reltolink" name="dotRef" value="link" checked />
+              <label for="reltolink">Link</label>
+              <input type="radio" id="reltopointer" name="dotRef" value="pointer" />
+              <label for="reltopointer">Mouse Pointer</label>
+            </div>
+          </div>
+          <div class="field-outer">
+            <h2 for="xOffset" class="xyoffsets">Offset X:</h2>
+            <input type="number" id="xOffset" value="12" min="-50" max="50" class="field" />
+            <h2 for="yOffset" class="xyoffsets">Offset Y:</h2>
+            <input type="number" id="yOffset" value="0" min="-50" max="50" class="field" />
+          </div>
+        </div>
+        <div class="field-outer">
+          <h2>Open Links in?</h2>
+          <div class="switch-field-radio">
+            <input type="radio" id="openInWindow" name="linkDestination" value="window" checked />
+            <label for="openInWindow">Windows</label>
+            <input type="radio" id="openInTab" name="linkDestination" value="tab" />
+            <label for="openInTab">Tabs</label>
+          </div>
+        </div>
+        <div>
+          <h2>Monitor set up </h2>
+          <button id="openPopUps" class="tt-btn">Show Monitor Numbers</button>
+          <button id="closePopups" class="tt-btn">Close Popups</button>
+          <table class="w-100" id="monitorsCnfigTable">
+            <thead>
+              <tr>
+                <th>
+                  <h2 class="no-wrap">Monitor ID</h2>
+                </th>
+                <th>
+                  <h2>Order</h2>
+                </th>
+                <th>
+                  <h2>Layout</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="monitorsTBody"></tbody>
+          </table>
+        </div>
+      </form>
+
+
+      <a href="https://dataz.co" target="_blank">by Data|z</a>
+      <p class="t-right">Clicks: <span id="clicksCount"></span></p>
+    </div>
+  </div>
+  <script src="../js/init.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,758 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+td {
+  position: relative;
+}
+select.layoutsSelect {
+  width: 50%;
+  height: 52px;
+  min-width: 100px;
+  border: 1px solid silver;
+  padding: 4px;
+  border-radius: 2px;
+  margin-left: 125px;
+}
+
+.layoutsCol img {
+  margin-right: 10px;
+}
+
+.disabled-input {
+  border: 0px solid transparent;
+  cursor: default;
+}
+
+.layoutsCol * {
+  vertical-align: bottom;
+}
+
+.popup-header {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+  background: #7fbcff;
+  display: flex;
+  color: #fff;
+}
+
+.panel-title {
+  font-size: 25px;
+  margin: 4px;
+}
+
+.panel-title span {
+  font-weight: normal;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+input.field {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 36px;
+  height: 20px;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-100 {
+  width: 100%;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.green {
+  color: #28a745;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: -3px;
+  bottom: -3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider.in-white:before {
+  background-color: #7fbcff;
+}
+
+input:checked+.slider {
+  background-color: #28a745;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #28a745;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switch-field-radio {
+  display: flex;
+  overflow: hidden;
+}
+
+.switch-field-radio input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field-radio label {
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 16px;
+  height: 16px;
+  text-align: center;
+  padding: 8px 11px;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.switch-field-radio label {
+  min-width: 45px;
+}
+
+.switch-field-radio label:hover {
+  cursor: pointer;
+}
+
+.switch-field-radio input:checked+label {
+  background-color: #a5dc86;
+  box-shadow: none;
+}
+
+.switch-field-radio label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field-radio label:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+
+.monitorId {
+  background: #ff6633;
+  border-radius: 50px;
+}
+
+.monitorId h1 {
+  font-size: 200px;
+  font-weight: bolder;
+  color: white;
+}
+
+.h-350 {
+  height: 350px;
+}
+
+.displaysIDs {
+  width: 28px;
+  height: 70px;
+  border-radius: 3px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.displaysIDs .displayID-div {
+  background: #ff6633;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 3px;
+}
+
+.displayOrder {
+  width: 95%;
+  height: 52px;
+  min-width: 100px;
+  border: 1px solid silver;
+  padding: 4px;
+  border-radius: 2px;
+  margin-left: 3px;
+}
+
+.tt-btn {
+  color: rgba(0, 0, 0, 0.6);
+  background: #a5dc86;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 30px;
+  border-radius: 3px;
+}
+
+table#monitorsCnfigTable {
+  max-width: 950px;
+}
+
+table#monitorsCnfigTable th {
+  min-width: 100px;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.popup-display-monitors,
+.popup-display-monitors-layout {
+  font-size: 62px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.popup-display-monitors {
+  margin-right: 20px;
+}
+
+.layout-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 80px;
+}
+
+.layout-grid {
+  height: 100%;
+  width: 113px;
+  display: inline-block;
+}
+
+.slot-11,
+.slot-12,
+.slot-12-b,
+.slot-21,
+.slot-21-r,
+.slot-22,
+.slot-22-r,
+.slot-22-b,
+.slot-22-br,
+.slot-23,
+.slot-23-r,
+.slot-23-m,
+.slot-23-mr,
+.slot-32,
+.slot-32-m,
+.slot-32-b,
+.slot-32-mb,
+.slot-33,
+.slot-33-mx,
+.slot-33-my,
+.slot-33-mm,
+.slot-51-r,
+.slot-51-br,
+.slot-52 {
+  background: #929292;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial";
+  display: inline-block;
+  box-sizing: border-box;
+}
+.tab-11,
+.tab-12,
+.tab-12-b,
+.tab-21,
+.tab-21-r,
+.tab-22,
+.tab-22-r,
+.tab-22-b,
+.tab-22-br,
+.tab-53 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial";
+  display: inline-block;
+  box-sizing: border-box;
+}
+.slot-11,
+.tab-11 {
+  width: 112px;
+  height: 62px;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.tab-53-child {
+  width: 76px;
+  height: 62px;
+  border: #5E5E5E 4px solid;
+  box-sizing: border-box;
+  background-color: #929292;
+}
+.tab-12 .tab-53-child,
+.tab-12-b .tab-53-child {
+  height: 30px;
+}
+.tab-12 .tab-11-r,
+.tab-12-b .tab-11-r {
+  height: 18px;
+}
+
+.tab-11-r {
+  box-sizing: border-box;
+  width: 40px;
+  height: 50px;
+  background-color: #929292;
+  border: #5E5E5E solid 4px;
+  border-left: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.tab-11 .tab-53-child,
+.tab-12 .tab-53-child,
+.tab-12-b .tab-53-child {
+  border-right: none;
+}
+.child1,
+.child2 {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  border: #5E5E5E solid 4px;
+  border-top: none;
+}
+.child2 {
+  border-right: none;
+}
+
+/*Position-Relation*/
+.tab-11,
+.tab-22,
+.tab-22-r,
+.tab-22-b,
+.tab-22-br {
+  position: relative;
+}
+
+/*Positon-Asolute*/
+.tab-num,
+.tab-53-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*Border 4px*/
+
+/*Display-flex*/
+.tab-22-child,
+.tab-53-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.tab-num {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  line-height: 62px;
+}
+.tab-53,
+.tab-53 .tab-53-child{
+  width: 78px;
+  height: 62px;
+  line-height: 62px;
+  font-size: 20px;
+}
+.tab-53 .child1 {
+  border-right: none;
+}
+.slot-12,
+.slot-12-b,
+.tab-12,
+.tab-12-b {
+  width: 112px;
+  height: 30px;
+  line-height: 22px;
+  font-size: 15px;
+  position: relative;
+}
+.tab-12 .tab-num,
+.tab-12-b .tab-num {
+  line-height: 30px;
+}
+.slot-21,
+.slot-21-r,
+.tab-21,
+.tab-21-r,
+.tab-21-child {
+  width: 54px;
+  height: 62px;
+  line-height: 48px;
+  font-size: 20px;
+  position: relative;
+}
+.tab-21-child {
+  display: flex;
+  justify-content: flex-end;
+  border: #5E5E5E 4px solid;
+  box-sizing: border-box;
+  background-color: #929292;
+}
+
+.slot-22,
+.slot-22-r,
+.slot-22-b,
+.slot-22-br,
+.tab-22,
+.tab-22-r,
+.tab-22-b,
+.tab-22-br {
+  width: 54px;
+  height: 30px;
+  line-height: 22px;
+}
+.tab-22-child {
+  box-sizing: border-box;
+  width: 54px;
+  height: 30px;
+  background-color: #929292;
+  border: #5E5E5E 4px solid;
+}
+.tab-22 .tab-num,
+.tab-22-r .tab-num,
+.tab-22-b .tab-num,
+.tab-22-br .tab-num {
+  line-height: 30px;
+  font-size: 14px;
+  /* width: 35px;
+  height: 23px;
+  background-size: contain !important; */
+}
+
+.slot-52 {
+  width: 30px;
+  height: 62px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.slot-51-r,
+.slot-51-br {
+  width: 30px;
+  height: 30px;
+  line-height: 22px;
+}
+.slot-23,
+.slot-23-r,
+.slot-23-m,
+.slot-23-mr {
+  width: 54px;
+  height: 19px;
+}
+.slot-32,
+.slot-32-m,
+.slot-32-b,
+.slot-32-mb {
+  width: 35px;
+  height: 30px;
+  line-height: 22px;
+}
+.slot-33,
+.slot-33-mx,
+.slot-33-my,
+.slot-33-mm {
+  width: 35px;
+  height: 19px;
+}
+.slot-23-m,
+.slot-23-mr {
+  height: 20px;
+}
+.slot-33-mx,
+.slot-33-mm {
+  width: 36px;
+}
+.slot-12-b,
+.slot-22-b,
+.slot-22-br,
+.slot-32-b,
+.slot-32-mb,
+.slot-51-br,
+.tab-12-b,
+.tab-22-b,
+.tab-22-br,
+.tab-32-b,
+.tab-32-mb {
+  margin-top: 2px;
+}
+.slot-21-r,
+.slot-22-r,
+.slot-22-br,
+.slot-23-r,
+.slot-23-mr,
+.slot-51-r,
+.slot-51-br,
+.slot-52,
+.tab-21-r,
+.tab-22-r,
+.tab-22-br,
+.tab-23-r,
+.tab-23-mr {
+  margin-left: 4px;
+}
+.slot-23-m,
+.slot-23-mr,
+.slot-33-my {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.slot-32-m,
+.slot-32-mb,
+.slot-33-mx {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.slot-33-mm {
+  margin: 2px 3px;
+}
+.parent-52 {
+  display: inline-block;
+  width: 28px;
+}
+.parent-half {
+  display: inline-block;
+  width: 54px;
+}
+
+.popup-display {
+  border: dashed 2px deepskyblue;
+  padding: 9px 37px 4px 56px;
+  position: relative;
+  margin: 10px 0px;
+  height: 90px;
+  width: 110px;
+}
+.popup-display .popup-display-monitors {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  height: 67px;
+  display: inline-block;
+  line-height: 62px;
+  transform: translateY(-50%);
+}
+.popup-display .layout-grid {
+  width: 112px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-44%);
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  background-color: deepskyblue;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  line-height: 17px;
+  cursor: pointer;
+}
+.close:hover {
+  background-color: #ff6633;
+}
+.child.close {
+  width: 16px;
+  height: 16px;
+  line-height: 15px;
+  background-color: #ff9400;
+  top: -8px;
+  right: -4px;
+  display: none;
+}
+.child.close:hover {
+  background-color: rebeccapurple;
+}
+
+.popup-display .slot-11,
+.popup-display .slot-12,
+.popup-display .slot-12-b,
+.popup-display .slot-21,
+.popup-display .slot-21-r,
+.popup-display .slot-22,
+.popup-display .slot-22-r,
+.popup-display .slot-22-b,
+.popup-display .slot-22-br,
+.popup-display .slot-23,
+.popup-display .slot-23-r,
+.popup-display .slot-23-m,
+.popup-display .slot-23-mr,
+.popup-display .slot-32,
+.popup-display .slot-32-m,
+.popup-display .slot-32-b,
+.popup-display .slot-32-mb,
+.popup-display .slot-33,
+.popup-display .slot-33-mx,
+.popup-display .slot-33-my,
+.popup-display .slot-33-mm,
+.popup-display .slot-51-r,
+.popup-display .slot-51-br,
+.popup-display .slot-52,
+.popup-display .tab-11,
+.popup-display .tab-12,
+.popup-display .tab-12-b,
+.popup-display .tab-21,
+.popup-display .tab-21-r,
+.popup-display .tab-22,
+.popup-display .tab-22-r,
+.popup-display .tab-22-b,
+.popup-display .tab-22-br,
+.popup-display .tab-53 {
+  position: relative;
+  cursor: pointer;
+}
+.popup-display .slot-11:hover .close,
+.popup-display .slot-12:hover .close,
+.popup-display .slot-12-b:hover .close,
+.popup-display .slot-21:hover .close,
+.popup-display .slot-21-r:hover .close,
+.popup-display .slot-22:hover .close,
+.popup-display .slot-22-r:hover .close,
+.popup-display .slot-22-b:hover .close,
+.popup-display .slot-22-br:hover .close,
+.popup-display .slot-23:hover .close,
+.popup-display .slot-23-r:hover .close,
+.popup-display .slot-23-m:hover .close,
+.popup-display .slot-23-mr:hover .close,
+.popup-display .slot-32:hover .close,
+.popup-display .slot-32-m:hover .close,
+.popup-display .slot-32-b:hover .close,
+.popup-display .slot-32-mb:hover .close,
+.popup-display .slot-33:hover .close,
+.popup-display .slot-33-mx:hover .close,
+.popup-display .slot-33-my:hover .close,
+.popup-display .slot-33-mm:hover .close,
+.popup-display .slot-51-r:hover .close,
+.popup-display .slot-51-br:hover .close,
+.popup-display .slot-52:hover .close,
+.popup-display .tab-11:hover .close,
+.popup-display .tab-12:hover .close,
+.popup-display .tab-12-b:hover .close,
+.popup-display .tab-21:hover .close,
+.popup-display .tab-21-r:hover .close,
+.popup-display .tab-22:hover .close,
+.popup-display .tab-22-r:hover .close,
+.popup-display .tab-22-b:hover .close,
+.popup-display .tab-22-br:hover .close,
+.popup-display .tab-53:hover .close {
+  display: block;
+}
+.popup-display .parent-half {
+  display: inline-block;
+  width: 54px;
+}

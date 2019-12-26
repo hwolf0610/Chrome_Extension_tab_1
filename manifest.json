@@ -1,0 +1,49 @@
+{
+  "name": "Target Tabs",
+  "version": "1.0.59",
+  "description": "Open links in targeted tabs",
+  "homepage_url": "https://dataz.co",
+  "manifest_version": 2,
+  "minimum_chrome_version": "35",
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "html/popup.html",
+    "default_icon": "img/icon.png",
+    "default_title": "Target Tabs1"
+  },
+  "options_page": "html/options.html",
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "js/init.js",
+        "js/content.js"
+      ],
+      "css": [
+        "css/content.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "img/*",
+    "html/*"
+  ],
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "tabs",
+    "system.display",
+    "<all_urls>"
+  ]
+}
